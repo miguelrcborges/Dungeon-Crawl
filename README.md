@@ -1,2 +1,6 @@
 # Dungeon-Crawl
-A funny game I'm doing with a partner in order to master Matlab
+A funny game I'm doing with a partner in order to master Matlab.
+In order to run, set all this files in the same folder and run main.m.
+
+v0.1
+We can move! We start in a small area for now.
