@@ -8,8 +8,10 @@ function x = move(a,b,map)
     x = b + [-1 0];
   case 'd'
     x = b + [1 0];
+  otherwise
+    x = b;
   end
   if map(x(1),x(2)) == 1
-    x = b
+    x = b;
   end
 end
