@@ -15,6 +15,8 @@ function map = drawMap(pos,a);
         fprintf('@.');
       case 3
         fprintf('M.');
+        case 4
+        fprintf(' |');
       end
     end
   fprintf('\n');
