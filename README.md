@@ -10,8 +10,8 @@ In order to run, set all this files in the same folder and run main.m.
 
 
 
-#0.2
+# v0.2
 Collisions working properly :).
 
-#v0.1
+# v0.1
 We can move! We start in a small area for now.
