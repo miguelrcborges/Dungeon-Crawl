@@ -3,6 +3,6 @@ world = 1;
 while true
   clc
   map = drawMap(pos,world);
-  a = input('\n','s');
-  pos = move(a,pos,map);
+  action = input('\n','s');
+  [world pos map] = move(action,pos,map,world);
 end
