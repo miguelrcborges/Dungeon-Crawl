@@ -1,7 +1,9 @@
-function map = drawMap(pos,a);
-  switch a
+function map = drawMap(pos,world);
+  switch world
   case 1
     map=[1,1,1,1,1;1,0,0,0,1;1,0,0,0,1;1,0,0,3,1;1,1,1,4,1];
+  case 2
+    map=zeros(5,5);
   end
   map(pos(1),pos(2)) = 2;
   for h=1:size(map,2)

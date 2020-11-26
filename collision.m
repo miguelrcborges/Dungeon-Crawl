@@ -1,6 +1,11 @@
 function [world newpos map] = collision(pos,map,world,newpos)
-  switch map(newpos(1),newpos(2))
-  case 1
+  if map(newpos(1),newpos(2)) == 1
     newpos = pos;
+  else
+    switch world
+    case 1
+      world = 2;
+      newpos = [1 1];
+    end
   end
 end
