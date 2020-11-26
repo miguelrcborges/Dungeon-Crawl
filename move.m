@@ -11,7 +11,7 @@ function [world newpos map] = move(action,pos,map,world)
   otherwise
     newpos = pos;
   end
-  if map(newpos(1),newpos(2)) == 1
-    newpos = pos;
+  if map(newpos(1),newpos(2)) ~= 0
+    [world newpos map] = collision(pos,map,world,newpos)
   end
 end
