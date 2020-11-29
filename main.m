@@ -4,7 +4,7 @@ world = 1;
 event = [0 0];
 while true
   clc
-  map = mkMap(pos,world,world1);
+  map = mkMap(pos,world,world1)
   x = drawMap(map,pos);
   action = input('\n','s');
   [world pos map] = move(action,pos,map,world);
