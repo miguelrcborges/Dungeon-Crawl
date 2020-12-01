@@ -7,9 +7,9 @@ function [world newpos map] = collision(pos,map,world,newpos)
       world = 2;
       newpos = [2 2];
     case 2
-      if newpos == [1 2]
+      if newpos == [2 1]
         world = 1;
-        newpos = [6 2];
+        newpos = [6 7];
       elseif newpos == [13 8]
         world = 3;
         newpos = [6 2];
