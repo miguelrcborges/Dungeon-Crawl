@@ -1,6 +1,8 @@
 function [world newpos map] = collision(pos,map,world,newpos)
   if map(newpos(1),newpos(2)) == 1
     newpos = pos;
+  elseif map(newpos(1),newpos(2)) == 3
+    fight=1;
   else
     switch world
     case 1

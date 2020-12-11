@@ -1,12 +1,11 @@
 clc, clear;
 user=[50 10 10];  %Hp, attack, defense
-enemy=[40 5 -5];
+enemy=enemy_stats;
 fight=1;
-enemy_name='Pikachu';
 while fight==1
-    disp(HealthBar(user(1)));
+    disp(HealthBar(user(1)))
     disp(user(1));
-    disp(HealthBar(enemy(1)));
+    disp(HealthBar(enemy(1)))
     disp(enemy(1));
     dodge=0;
     dmg=0;
