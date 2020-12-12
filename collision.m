@@ -1,8 +1,6 @@
-function [world newpos map] = collision(pos,map,world,newpos)
+function [world newpos map] = collision(pos,map,world,newpos,user)
   if map(newpos(1),newpos(2)) == 1
     newpos = pos;
-  elseif map(newpos(1),newpos(2)) == 3
-    fight=1;
   else
     switch world
     case 1
@@ -15,6 +13,8 @@ function [world newpos map] = collision(pos,map,world,newpos)
       elseif newpos == [13 8]
         world = 3;
         newpos = [6 2];
+      elseif map(newpos(1),newpos(2))== 3
+        fight('Pikachu',user)
       end
     case 3
       if newpos == [6 1]

@@ -1,4 +1,4 @@
-function [world newpos map] = move(action,pos,map,world)
+function [world newpos map] = move(action,pos,map,world,user)
   switch action
   case 'w'
     newpos = pos + [0 -1];
@@ -12,6 +12,6 @@ function [world newpos map] = move(action,pos,map,world)
     newpos = pos;
   end
   if map(newpos(1),newpos(2)) ~= 0
-    [world newpos map] = collision(pos,map,world,newpos)
+    [world newpos map] = collision(pos,map,world,newpos,user);
   end
 end
