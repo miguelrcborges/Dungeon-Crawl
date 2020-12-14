@@ -1,4 +1,4 @@
-function [] = Fight(monster,user)
+function [] = fight(monster,user)
   switch monster
   case 'Pikachu'
     enemy = [40 5 5];
@@ -13,18 +13,17 @@ function [] = Fight(monster,user)
     dodge = 0;
     dmg = 0;
     victory = 0;
-    fprintf('\n(1)Attack\n(2)Dodge\n(3)Talk\n(4)Bag\n(5)Run\n');
-    action = input('');
+    action = input('\n(1)Attack\n(2)Dodge\n(3)Talk\n(4)Bag\n(5)Run\n','s');
     clc
     switch action
-    case 1
+    case '1'
       dmg = user(2);
-    case 2
+    case '2'
       dodge = 1;
-    case 3
+    case '3'
       response(monster)
-    case 4
-    case 5
+    case '4'
+    case '5'
       fight = 0;
     end
     if dmg > enemy(3)
