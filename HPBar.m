@@ -1,6 +1,5 @@
 function [] = HPBar(health)
 
-fprintf('\n'); %nnova linha
 N=ceil(health/5);
 B=[];
 if N~=0

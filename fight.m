@@ -6,8 +6,10 @@ function [] = fight(monster,user)
   fight = 1;
   clc
   while fight == 1
+    fprintf('\n Your health');
     HPBar(user(1))
     disp(user(1))
+    fprintf('\n %s',monster);
     HPBar(enemy(1))
     disp(enemy(1))
     dodge = 0;
