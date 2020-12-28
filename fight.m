@@ -19,7 +19,9 @@ function [] = fight(monster,user)
     clc
     switch action
     case '1'
-      dmg = user(2);
+      %dmg = user(2);
+      action2= input('\n(1)%s\n(2)%s\n(3)%s\n(4)%s\n',move_names(1),move_names(2),move_names(3),move_names(4));  %usei action 2 pq n sei se usar action buga o jogo. also move_names n sei se é´melhor q ter 4 variaveis para cada move
+      dmg= moveset(1,action2);
     case '2'
       dodge = 1;
     case '3'
