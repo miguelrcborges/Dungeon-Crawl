@@ -17,7 +17,7 @@ function x = drawmap(map,pos)
       case 5
         fprintf('__');
       case 8
-        fprintf('$-')
+        fprintf('$/')
       end
     end
   fprintf('\n');

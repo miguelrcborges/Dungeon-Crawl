@@ -34,7 +34,7 @@ function [] = fight(monster,user,move_names,moveset)
     case '5'
       fight = 0;
     end
-    if dmg > enemy(3)
+    if dmg > enemy(3) && randi(10)>moveset(action,2)
         enemy(1) = enemy(1) - dmg + enemy(3);
     end
     if enemy(2) > user(3) && dodge == 0
