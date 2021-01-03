@@ -1,4 +1,4 @@
-function [] = fight(monster,user)
+function [] = fight(monster,user,move_names,moveset)
   switch monster
   case 'Pikachu'
     enemy = [40 5 5];
@@ -6,11 +6,13 @@ function [] = fight(monster,user)
   fight = 1;
   clc
   while fight == 1
-    fprintf('\n Your health');
+    fprintf('\n Your health \n');
     HPBar(user(1))
+    fprintf('\n')
     disp(user(1))
-    fprintf('\n %s',monster);
+    fprintf('\n %s\n',monster);
     HPBar(enemy(1))
+    fprintf('\n')
     disp(enemy(1))
     dodge = 0;
     dmg = 0;
@@ -20,8 +22,10 @@ function [] = fight(monster,user)
     switch action
     case '1'
       %dmg = user(2);
-      action2= input('\n(1)%s\n(2)%s\n(3)%s\n(4)%s\n',move_names(1),move_names(2),move_names(3),move_names(4));  %usei action 2 pq n sei se usar action buga o jogo. also move_names n sei se é´melhor q ter 4 variaveis para cada move
-      dmg= moveset(1,action2);
+      fprintf('\n(1)%s\n(2)%s\n(3)%s\n(4)%s\n',move_names{1},move_names{2},move_names{3},move_names{4});  %usei action 2 pq n sei se usar action buga o jogo. also move_names n sei se é´melhor q ter 4 variaveis para cada move
+      action = input('');
+      dmg = moveset(action,1);
+      clc
     case '2'
       dodge = 1;
     case '3'

@@ -6,10 +6,11 @@ pos = [2,2];
 world = 1;
 event = [0 0];
 user=[50 10 10];
+[moveset move_names] = attack_list([1 1 1 1])
 while true
   clc
   map = mkMap(pos,world,world1,world2,world3,world4);
   x = drawMap(map,pos);
   action = input('\n','s');
-  [world pos map] = move(action,pos,map,world,user);
+  [world pos map] = move(action,pos,map,world,user,move_names,moveset);
 end

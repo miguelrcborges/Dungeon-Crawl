@@ -25,8 +25,8 @@ function [moveset,move_names] = attack_list(moveset_code)
 
 %10 Lightning Bolt (20,7,6)
 
-Move_database=(10,8,1; 20,7,1; 15,8,2; 10,9,3; 20,8,3; 10,9,4; 10,9,5; 15,8,5; 10,9,6; 20,7,6);
-Move_name_database=('Firebolt';'Fireblast';'Bubble Stream';'Dust Cloud';'Earthquake';'Vine Growth';'Freeze Ray';'Icycle Shards';'Spark';'Lightning Bolt');
+move_database = [10,8,1; 20,7,1; 15,8,2; 10,9,3; 20,8,3; 10,9,4; 10,9,5; 15,8,5; 10,9,6; 20,7,6];
+move_name_database = [{'Firebolt'};{'Fireblast'};{'Bubble Stream'};{'Dust Cloud'};{'Earthquake'};{'Vine Growth'};{'Freeze Ray'};{'Icycle Shards'};{'Spark'};{'Lightning Bolt'}];
 
-moveset = [Move_database(moveset_code(1),:);Move_database(moveset_code(2),:);Move_database(moveset_code(3),:);Move_database(moveset_code(4),:)];
-move_names = [Move_name_database(moveset_name_code(1),:);Move_name_database(moveset_code(2),:);Move_name_database(moveset_code(3),:);Move_name_database(moveset_code(4),:)]
+moveset = [move_database(moveset_code(1),:);move_database(moveset_code(2),:);move_database(moveset_code(3),:);move_database(moveset_code(4),:)];
+move_names = [move_name_database(moveset_code(1));move_name_database(moveset_code(2));move_name_database(moveset_code(3));move_name_database(moveset_code(4))]
