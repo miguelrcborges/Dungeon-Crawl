@@ -5,6 +5,7 @@ world4 = [1 1 1 1 1 1 1 1; 1 0 0 0 0 0 0 1; 5 0 0 0 1 1 3 1; 1 0 0 0 0 1 0 1; 1 
 pos = [2,2];
 world = 1;
 event = [0 0];
+username=input('What is your name?')
 user=[50 10 10];
 [moveset move_names] = attack_list([1 1 1 1])
 while true
@@ -12,5 +13,5 @@ while true
   map = mkMap(pos,world,world1,world2,world3,world4);
   x = drawMap(map,pos);
   action = input('\n','s');
-  [world pos map] = move(action,pos,map,world,user,move_names,moveset);
+  [world pos map] = move(action,pos,map,world,user,move_names,moveset,username);
 end

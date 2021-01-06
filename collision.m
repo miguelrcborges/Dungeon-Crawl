@@ -1,4 +1,4 @@
-function [world newpos map] = collision(pos,map,world,newpos,user,move_names,moveset)
+function [world newpos map] = collision(pos,map,world,newpos,user,move_names,moveset,username)
   if map(newpos(1),newpos(2)) == 1
     newpos = pos;
   else
@@ -14,7 +14,7 @@ function [world newpos map] = collision(pos,map,world,newpos,user,move_names,mov
         world = 3;
         newpos = [6 2];
       elseif map(newpos(1),newpos(2))== 3
-        fight('Pikachu',user,move_names,moveset)
+        fight('Pikachu',user,move_names,moveset,username)
       end
     case 3
       if newpos == [6 1]

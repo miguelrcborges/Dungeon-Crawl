@@ -1,12 +1,13 @@
-function [] = fight(monster,user,move_names,moveset)
+function [] = fight(monster,user,move_names,moveset,username)
   switch monster
   case 'Pikachu'
     enemy = [40 5 5];
+    env=0
   end
   fight = 1;
   clc
   while fight == 1
-    fprintf('\n Your health \n');
+    fprintf('\n %s \n',username);
     HPBar(user(1))
     fprintf('\n')
     disp(user(1))
@@ -36,6 +37,7 @@ function [] = fight(monster,user,move_names,moveset)
     end
     if dmg > enemy(3) && randi(10)>moveset(action,2)
         enemy(1) = enemy(1) - dmg + enemy(3);
+        env=environment(env,moveset(action,3));
     end
     if enemy(2) > user(3) && dodge == 0
         user(1) = user(1) - enemy(2) + user(3);
