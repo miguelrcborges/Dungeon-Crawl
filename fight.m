@@ -7,7 +7,7 @@ function [] = fight(monster,user,move_names,moveset,username)
   fight = 1;
   clc
   while fight == 1
-    fprintf('\n %s \n',username);
+    fprintf('%d\n %s \n',env,username);
     HPBar(user(1))
     fprintf('\n')
     disp(user(1))
@@ -35,12 +35,12 @@ function [] = fight(monster,user,move_names,moveset,username)
     case '5'
       fight = 0;
     end
-    if dmg > enemy(3) && randi(10)>moveset(action,2)
-        enemy(1) = enemy(1) - dmg + enemy(3);
+    if dmg > enemy(3) && randi(10)<=moveset(action,2)
+        enemy(1) = enemy(1) - dmg;
         env=environment(env,moveset(action,3));
     end
     if enemy(2) > user(3) && dodge == 0
-        user(1) = user(1) - enemy(2) + user(3);
+        user(1) = user(1) - enemy(2);
     end
     if enemy(1) <= 0
         fight = 0;
@@ -54,5 +54,5 @@ function [] = fight(monster,user,move_names,moveset,username)
     clc
     fprintf('Congratulations!! \n\nYou defeated %s!!\n\n',monster);
   end
-  input('Press any key to continue');
+  input('Press Enter to continue','s');
 end

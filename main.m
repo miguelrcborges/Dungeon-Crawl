@@ -5,7 +5,7 @@ world4 = [1 1 1 1 1 1 1 1; 1 0 0 0 0 0 0 1; 5 0 0 0 1 1 3 1; 1 0 0 0 0 1 0 1; 1 
 pos = [2,2];
 world = 1;
 event = [0 0];
-username=input('What is your name?')
+username=input('What is your name?\n\n','s')
 user=[50 10 10];
 [moveset move_names] = attack_list([1 1 1 1])
 while true
